@@ -1,5 +1,5 @@
 services:
   - type: web
-    name: edu
+    name: exam-v0.1a
     env: docker
     plan: free
