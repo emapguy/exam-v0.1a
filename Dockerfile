@@ -2,9 +2,9 @@ FROM node:20-alpine
 
 RUN apk add --no-cache git
 
-RUN git clone https://github.com/<user>/<the forked repository name>.git
+RUN git clone https://github.com/emapguy/exam-v0.1a.git
 
-WORKDIR /<the forked repository name>
+WORKDIR /exam-v0.1a
 
 RUN npm install
 
