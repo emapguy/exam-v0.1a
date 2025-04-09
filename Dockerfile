@@ -1,12 +1,11 @@
-FROM node:bookworm-slim
-ENV NODE_ENV=production
+FROM node:20-alpine
 
-WORKDIR /app
+RUN apk add --no-cache git
 
-COPY ["package.json", "./"]
+RUN git clone https://github.com/<user>/<the forked repository name>.git
+
+WORKDIR /<the forked repository name>
 
 RUN npm install
 
-COPY . .
-
-CMD [ "node", "index.js" ]
+CMD npm start
